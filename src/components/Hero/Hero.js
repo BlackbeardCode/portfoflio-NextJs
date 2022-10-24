@@ -5,7 +5,6 @@ import {
   SectionText,
   SectionTitle,
 } from "../../styles/GlobalComponents";
-import Typical from "react-typical";
 import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
 import { motion } from "framer-motion";
@@ -20,19 +19,6 @@ const Hero = () => (
       >
         <SectionTitle main center>
           Hello there! <br />
-          <Typical
-            steps={[
-              "Developer",
-              1000,
-              "Designer",
-              1000,
-              "Student",
-              1000,
-              "Open Sourcer",
-            ]}
-            loop={Infinity}
-            wrapper="p"
-          />
         </SectionTitle>
         <SectionText>
           <motion.p
