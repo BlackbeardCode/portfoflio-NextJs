@@ -1,55 +1,94 @@
-import React from 'react';
-import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
-import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
+import React from "react";
+import {
+  SiReact,
+  SiJavascript,
+  SiCss3,
+  SiHtml5,
+  SiNodeDotJs,
+  SiNextDotJs,
+  SiMaterialUi,
+  SiTailwindcss,
+  SiBootstrap,
+  SiGit,
+} from "react-icons/si";
+import {
+  Section,
+  SectionDivider,
+  SectionText,
+  SectionTitle,
+} from "../../styles/GlobalComponents";
+import { List, ListItem, ListTitle } from "./TechnologiesStyles";
 
-const Technologies = () =>  (
+const Technologies = () => (
   <Section id="tech">
-    <SectionDivider divider />
     <SectionTitle>Technologies</SectionTitle>
+    <SectionDivider colorAlt style={{ marginTop: 10 }} />
     <SectionText>
-      I've worked with a range a technologies in the web development world.
-      From Back-end To Design
+      I've worked with a range a technologies in the web development world. From
+      Back-end To Design
     </SectionText>
     <List>
       <ListItem>
         <picture>
-          <DiReact size="3rem" />
+          <SiHtml5 size="5rem" />
         </picture>
-        <ListContainer>
-          <ListTitle>Front-End</ListTitle>
-          <ListParagraph>
-            Experiece with <br />
-            React.js
-          </ListParagraph>
-        </ListContainer>
+        <ListTitle>Html5</ListTitle>
       </ListItem>
       <ListItem>
         <picture>
-          <DiFirebase size="3rem" />
+          <SiCss3 size="5rem" />
         </picture>
-        <ListContainer>
-          <ListTitle>Back-End</ListTitle>
-          <ListParagraph>
-            Experience with <br />
-            Node and Databases
-          </ListParagraph>
-        </ListContainer>
+        <ListTitle>Css3</ListTitle>
       </ListItem>
       <ListItem>
         <picture>
-          <DiZend size="3rem" />
+          <SiJavascript size="5rem" />
         </picture>
-        <ListContainer>
-          <ListTitle>UI/UX</ListTitle>
-          <ListParagraph>
-            Experience with <br />
-            tools like Figma
-          </ListParagraph>
-        </ListContainer>
+        <ListTitle>JavaScript</ListTitle>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <SiNodeDotJs size="5rem" />
+        </picture>
+        <ListTitle>NodeJs</ListTitle>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <SiReact size="5rem" />
+        </picture>
+        <ListTitle>React</ListTitle>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <SiNextDotJs size="5rem" />
+        </picture>
+        <ListTitle>NextJs</ListTitle>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <SiTailwindcss size="5rem" />
+        </picture>
+        <ListTitle>Tailwind</ListTitle>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <SiMaterialUi size="5rem" />
+        </picture>
+        <ListTitle>MaterialUi</ListTitle>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <SiBootstrap size="5rem" />
+        </picture>
+        <ListTitle>SiBootstrap</ListTitle>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <SiGit size="5rem" />
+        </picture>
+        <ListTitle>Git</ListTitle>
       </ListItem>
     </List>
-    <SectionDivider colorAlt />
   </Section>
 );
 
