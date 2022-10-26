@@ -24,9 +24,9 @@ const Hero = () => (
         <SectionText>
           <motion.p
             style={{
-              minHeight: "15vh",
+              minHeight: "18vh",
               minWidth: "30vw",
-              maxWidth: "80vw",
+              maxWidth: "85vw",
               marginRight: "20vw",
             }}
             animate={{ x: 0 }}
