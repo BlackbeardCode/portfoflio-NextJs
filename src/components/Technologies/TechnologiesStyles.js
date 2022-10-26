@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const List = styled.ul`
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   place-items: center;
   align-items: center;
   gap: 20px;
@@ -15,14 +15,13 @@ export const List = styled.ul`
 
   @media ${(props) => props.theme.breakpoints.md} {
     margin: 64px 0;
+    grid-template-columns: repeat(4, 1fr);
     gap: 18px;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    place-items: center;
-    align-items: center;
     gap: 20px;
   }
 `;

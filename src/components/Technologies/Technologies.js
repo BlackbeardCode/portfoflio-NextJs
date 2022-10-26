@@ -10,6 +10,8 @@ import {
   SiTailwindcss,
   SiBootstrap,
   SiGit,
+  SiMysql,
+  SiMongodb,
 } from "react-icons/si";
 import {
   Section,
@@ -18,6 +20,7 @@ import {
   SectionTitle,
 } from "../../styles/GlobalComponents";
 import { List, ListItem, ListTitle } from "./TechnologiesStyles";
+import { motion } from "framer-motion";
 
 const Technologies = () => (
   <Section id="tech">
@@ -87,6 +90,18 @@ const Technologies = () => (
           <SiGit size="5rem" />
         </picture>
         <ListTitle>Git</ListTitle>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <SiMysql size="5rem" />
+        </picture>
+        <ListTitle>MySql</ListTitle>
+      </ListItem>
+      <ListItem>
+        <picture>
+          <SiMongodb size="5rem" />
+        </picture>
+        <ListTitle>MongoDB</ListTitle>
       </ListItem>
     </List>
   </Section>

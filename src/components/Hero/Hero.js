@@ -26,7 +26,7 @@ const Hero = () => (
             style={{
               minHeight: "15vh",
               minWidth: "30vw",
-              maxWidth: "50vw",
+              maxWidth: "80vw",
               marginRight: "20vw",
             }}
             animate={{ x: 0 }}
