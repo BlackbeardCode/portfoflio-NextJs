@@ -2,17 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const bounceTransition = {
-  y: { duration: 1.2, yoyo: Infinity, ease: 'easeInOut' },
+  y: { duration: 5, yoyo: Infinity, ease: 'easeOut' },
 };
 
 const BackgroundAnimation = () => {
   return (
-    <motion.div
-      transition={bounceTransition}
-      animate={{ y: ['10%', '-3%'] }}
-      whileHover={{ scale: 1.15 }}
-      whileTap={{ scale: 1.25 }}
-    >
+    <motion.div transition={bounceTransition} animate={{ y: ['7.5%', '-5%'] }}>
       <svg
         width='500'
         height='500'
@@ -20,16 +15,40 @@ const BackgroundAnimation = () => {
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <g id='developer'>
-          <g id='back-grad'>
+        <motion.g
+          transition={bounceTransition}
+          animate={{ y: ['5%', '-3%'] }}
+          id='developer'
+        >
+          <motion.g
+            animate={{
+              scale: [0.9, 1.1, 0.9, 1, 0.9],
+              rotate: [0, 170, 360, 90, 0],
+              borderRadius: ['10%', '25%', '50%', '35%', '20%'],
+            }}
+            transition={{
+              duration: 5,
+              ease: 'easeInOut',
+              times: [0, 0.4, 1, 1.6, 2.2],
+              repeat: Infinity,
+              repeatDelay: 0,
+            }}
+            id='back-grad'
+          >
             <path
               id='Vector'
               d='M261.72 376.667C355.682 376.667 431.853 321.846 431.853 254.222C431.853 186.598 355.682 131.778 261.72 131.778C167.759 131.778 91.5879 186.598 91.5879 254.222C91.5879 321.846 167.759 376.667 261.72 376.667Z'
               fill='url(#paint0_linear_203_259)'
               fill-opacity='0.5'
             />
-          </g>
-          <g id='server'>
+          </motion.g>
+          <motion.g
+            id='server'
+            transition={bounceTransition}
+            animate={{ y: ['5%', '-3%'] }}
+            whileHover={{ scale: 1.15 }}
+            whileTap={{ x: -10 }}
+          >
             <path
               id='Vector_2'
               d='M174.858 239.444H93.1002V353.333H174.858V239.444Z'
@@ -50,8 +69,12 @@ const BackgroundAnimation = () => {
               d='M183.365 324.444H85.0662V365H183.365V324.444Z'
               fill='#3F3D56'
             />
-          </g>
-          <g id='desk'>
+          </motion.g>
+          <motion.g
+            id='desk'
+            transition={bounceTransition}
+            animate={{ y: ['5%', '-3%'] }}
+          >
             <path
               id='Vector_6'
               d='M346.881 261.667V348.436L359.016 372.09L359.94 373.889H407.823L408.79 261.667H346.881Z'
@@ -126,8 +149,12 @@ const BackgroundAnimation = () => {
               d='M377.715 350.556H389.309L394.14 346.111H372.401L377.715 350.556Z'
               fill='#3F3D56'
             />
-          </g>
-          <g id='input'>
+          </motion.g>
+          <motion.g
+            transition={bounceTransition}
+            animate={{ y: ['5%', '-3%'] }}
+            id='input'
+          >
             <path
               id='Vector_20'
               d='M313.8 245.773V247.222H246.692V246.063L246.784 245.773L248.438 240.556H312.428L313.8 245.773Z'
@@ -155,8 +182,13 @@ const BackgroundAnimation = () => {
               d='M313.8 245.556V247.222H246.692V245.889L246.784 245.556H313.8Z'
               fill='black'
             />
-          </g>
-          <g id='guy'>
+          </motion.g>
+          <motion.g
+            transition={bounceTransition}
+            animate={{ y: ['5%', '-3%'] }}
+            whileHover={{ scale: 1.15 }}
+            id='guy'
+          >
             <path
               id='Vector_25'
               opacity='0.4'
@@ -288,8 +320,13 @@ const BackgroundAnimation = () => {
               d='M142.109 144.419L138.474 143.333C138.474 143.333 131.204 146.047 129.387 157.445C127.569 168.842 128.932 214.432 131.204 214.975C133.476 215.518 142.425 207.037 143.857 208.835C145.289 210.633 140.746 201.406 142.109 196.522C143.472 191.637 142.109 144.419 142.109 144.419Z'
               fill='#2F2E41'
             />
-          </g>
-          <g id='monitor'>
+          </motion.g>
+          <motion.g
+            transition={bounceTransition}
+            animate={{ y: ['5%', '-3%'] }}
+            whileHover={{ scale: 1.15 }}
+            id='monitor'
+          >
             <path
               id='Vector_50'
               d='M269.754 217.454L267.733 230.528C267.733 230.528 257.785 235.884 264.78 236.041C271.775 236.199 304.728 236.041 304.728 236.041C304.728 236.041 311.101 236.041 300.997 230.371L298.976 216.667L269.754 217.454Z'
@@ -321,8 +358,8 @@ const BackgroundAnimation = () => {
               d='M341.582 117.778H226.471C224.066 117.778 222.117 119.749 222.117 122.18V200.597C222.117 203.029 224.066 205 226.471 205H341.582C343.987 205 345.936 203.029 345.936 200.597V122.18C345.936 119.749 343.987 117.778 341.582 117.778Z'
               fill='#0F1F2A'
             />
-          </g>
-        </g>
+          </motion.g>
+        </motion.g>
         <defs>
           <linearGradient
             id='paint0_linear_203_259'
