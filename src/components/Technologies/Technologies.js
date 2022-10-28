@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   SiReact,
   SiJavascript,
@@ -12,22 +12,22 @@ import {
   SiGit,
   SiMysql,
   SiMongodb,
-} from "react-icons/si";
+} from 'react-icons/si';
 import {
   Section,
   SectionDivider,
   SectionText,
   SectionTitle,
-} from "../../styles/GlobalComponents";
-import { List, ListItem, ListTitle } from "./TechnologiesStyles";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
-import { useAnimation } from "framer-motion";
+} from '../../styles/GlobalComponents';
+import { List, ListItem, ListTitle } from './TechnologiesStyles';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
+import { useAnimation } from 'framer-motion';
 
 const Technologies = () => {
   const { ref, inView } = useInView({
-    threshold: 0.1,
+    threshold: 0.2,
   });
   const animation = useAnimation();
 
@@ -36,33 +36,32 @@ const Technologies = () => {
       animation.start({
         x: 0,
         opacity: 1,
-        filter: "blur(0)",
         transition: {
-          type: "spring",
+          type: 'spring',
           duration: 1,
           bounce: 0.3,
         },
       });
     }
     if (!inView) {
-      animation.start({ x: -400, opacity: 0, filter: "blur(0.2px)" });
+      animation.start({ x: -200, opacity: 0 });
     }
-    console.log("inView: ", inView);
+    console.log('inView: ', inView);
   }, [inView]);
 
   return (
-    <Section id="tech">
+    <Section id='tech'>
       <SectionTitle>Technologies</SectionTitle>
       <SectionDivider colorAlt style={{ marginTop: 10 }} />
-      <SectionText ref={ref}>
+      <SectionText>
         I've worked with a range a technologies in the web development world.
         From Back-end To Design
       </SectionText>
-      <List>
+      <List ref={ref}>
         <motion.div animate={animation}>
           <ListItem>
             <picture>
-              <SiHtml5 size="7rem" />
+              <SiHtml5 size='7rem' />
             </picture>
             <ListTitle>Html5</ListTitle>
           </ListItem>
@@ -70,7 +69,7 @@ const Technologies = () => {
         <motion.div animate={animation}>
           <ListItem>
             <picture>
-              <SiCss3 size="7rem" />
+              <SiCss3 size='7rem' />
             </picture>
             <ListTitle>Css3</ListTitle>
           </ListItem>
@@ -78,7 +77,7 @@ const Technologies = () => {
         <motion.div animate={animation}>
           <ListItem>
             <picture>
-              <SiJavascript size="7rem" />
+              <SiJavascript size='7rem' />
             </picture>
             <ListTitle>JavaScript</ListTitle>
           </ListItem>
@@ -86,7 +85,7 @@ const Technologies = () => {
         <motion.div animate={animation}>
           <ListItem>
             <picture>
-              <SiNodeDotJs size="7rem" />
+              <SiNodeDotJs size='7rem' />
             </picture>
             <ListTitle>NodeJs</ListTitle>
           </ListItem>
@@ -94,7 +93,7 @@ const Technologies = () => {
         <motion.div animate={animation}>
           <ListItem>
             <picture>
-              <SiReact size="7rem" />
+              <SiReact size='7rem' />
             </picture>
             <ListTitle>React</ListTitle>
           </ListItem>
@@ -102,7 +101,7 @@ const Technologies = () => {
         <motion.div animate={animation}>
           <ListItem>
             <picture>
-              <SiNextDotJs size="7rem" />
+              <SiNextDotJs size='7rem' />
             </picture>
             <ListTitle>NextJs</ListTitle>
           </ListItem>
@@ -110,7 +109,7 @@ const Technologies = () => {
         <motion.div animate={animation}>
           <ListItem>
             <picture>
-              <SiTailwindcss size="7rem" />
+              <SiTailwindcss size='7rem' />
             </picture>
             <ListTitle>Tailwind</ListTitle>
           </ListItem>
@@ -118,7 +117,7 @@ const Technologies = () => {
         <motion.div animate={animation}>
           <ListItem>
             <picture>
-              <SiMaterialUi size="7rem" />
+              <SiMaterialUi size='7rem' />
             </picture>
             <ListTitle>MaterialUi</ListTitle>
           </ListItem>
@@ -126,7 +125,7 @@ const Technologies = () => {
         <motion.div animate={animation}>
           <ListItem>
             <picture>
-              <SiBootstrap size="7rem" />
+              <SiBootstrap size='7rem' />
             </picture>
             <ListTitle>SiBootstrap</ListTitle>
           </ListItem>
@@ -134,7 +133,7 @@ const Technologies = () => {
         <motion.div animate={animation}>
           <ListItem>
             <picture>
-              <SiGit size="7rem" />
+              <SiGit size='7rem' />
             </picture>
             <ListTitle>Git</ListTitle>
           </ListItem>
@@ -142,7 +141,7 @@ const Technologies = () => {
         <motion.div animate={animation}>
           <ListItem>
             <picture>
-              <SiMysql size="7rem" />
+              <SiMysql size='7rem' />
             </picture>
             <ListTitle>MySql</ListTitle>
           </ListItem>
@@ -150,7 +149,7 @@ const Technologies = () => {
         <motion.div animate={animation}>
           <ListItem>
             <picture>
-              <SiMongodb size="7rem" />
+              <SiMongodb size='7rem' />
             </picture>
             <ListTitle>MongoDB</ListTitle>
           </ListItem>
